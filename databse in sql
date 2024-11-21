@@ -1,0 +1,8 @@
+create database IT2A;
+use IT2A;
+create table employee(
+empid int not null primary key auto_increment,
+fullname varchar(250),
+uname varchar(250),
+pwd varchar(250)
+);
