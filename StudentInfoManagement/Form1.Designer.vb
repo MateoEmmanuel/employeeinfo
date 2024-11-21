@@ -27,6 +27,7 @@ Partial Class Form1
         Me.btnload = New System.Windows.Forms.Button()
         Me.btnclose = New System.Windows.Forms.Button()
         Me.dataRecord = New System.Windows.Forms.DataGridView()
+        Me.btnprint = New System.Windows.Forms.Button()
         CType(Me.dataRecord, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,7 +60,7 @@ Partial Class Form1
         '
         'btnclose
         '
-        Me.btnclose.Location = New System.Drawing.Point(92, 375)
+        Me.btnclose.Location = New System.Drawing.Point(92, 334)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(75, 23)
         Me.btnclose.TabIndex = 3
@@ -74,18 +75,28 @@ Partial Class Form1
         Me.dataRecord.Size = New System.Drawing.Size(519, 358)
         Me.dataRecord.TabIndex = 4
         '
+        'btnprint
+        '
+        Me.btnprint.Location = New System.Drawing.Point(64, 405)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(126, 23)
+        Me.btnprint.TabIndex = 5
+        Me.btnprint.Text = "Print Master List"
+        Me.btnprint.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(891, 483)
+        Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.dataRecord)
         Me.Controls.Add(Me.btnclose)
         Me.Controls.Add(Me.btnload)
         Me.Controls.Add(Me.btnadd)
         Me.Controls.Add(Me.btncheck)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.dataRecord, System.ComponentModel.ISupportInitialize).EndInit()
@@ -98,4 +109,5 @@ Partial Class Form1
     Friend WithEvents btnload As Button
     Friend WithEvents btnclose As Button
     Friend WithEvents dataRecord As DataGridView
+    Friend WithEvents btnprint As Button
 End Class

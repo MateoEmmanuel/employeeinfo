@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+Imports MySql.Data.MySqlClient
 Public Class Form1
 
     Dim str As String
@@ -33,5 +35,13 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         dbConnect()
+    End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        Form3.Show()
+        Dim reports As New ReportDocument
+        reports.Load("C:\Users\SANDBOX-17\Source\Repos\frncs04\StudentInfoManagement\StudentInfoManagement\studentList.rpt")
+        Form3.CrystalReportViewer1.ReportSource = reports
+        Form3.CrystalReportViewer1.Refresh()
     End Sub
 End Class
