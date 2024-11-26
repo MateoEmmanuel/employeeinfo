@@ -4,7 +4,7 @@ Public Class Form4
 
     Private Sub btnseearch_Click(sender As Object, e As EventArgs) Handles btnseearch.Click
         Dim report As New ReportDocument
-        report.Load("")
+        report.Load("C:\Users\SANDBOX-17\source\repos\MateoEmmanuel\StudentInfoManagement\StudentInfoManagement\StringReport.rpt")
         Dim cParamFieldDefinitions As ParameterFieldDefinitions
         Dim cParamFieldDefinition As ParameterFieldDefinition
         Dim cParamValues As New ParameterValues
@@ -17,7 +17,7 @@ Public Class Form4
         cParamValues.Clear()
         cParamValues.Add(cParamDiscreteValue)
         cParamFieldDefinition.ApplyCurrentValues(cParamValues)
-        CrystalReportViewer1.ReportSource = report \
+        CrystalReportViewer1.ReportSource = report
         CrystalReportViewer1.Refresh()
     End Sub
 
